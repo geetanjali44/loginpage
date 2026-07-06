@@ -34,14 +34,33 @@
             <h2>गणपति बप्पा मोरया</h2>
             <p>Login to continue</p>
 
-            <form>
-  <div class="input-with-mouse">
-    <input type="text" placeholder="Enter Mobile Number" required>
-    <img src="images/mouseinput.webp" class="input-corner-mouse" alt="Mouse">
-</div>
-                <input type="password" placeholder="Enter Password" required>
-                <button type="submit">Login</button>
-            </form>
+            <form id="loginForm">
+
+    <div class="input-with-mouse">
+        <input
+            type="tel"
+            id="mobileInput"
+            placeholder="Enter Mobile Number"
+            maxlength="10"
+            required
+        >
+        <img src="images/mouseinput.webp" class="input-corner-mouse" alt="Mouse">
+    </div>
+
+    <div class="password-box" id="passwordBox">
+        <input
+            type="password"
+            id="passwordInput"
+            placeholder="Enter Password"
+            required
+        >
+
+        <button type="submit" class="done-btn">
+            Done
+        </button>
+    </div>
+
+</form>
         </div>
 
     </div>
