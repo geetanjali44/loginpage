@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santarpana Home</title>
+
+    <link rel="stylesheet" href="home.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel+Decorative:wght@700;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Menu button -->
+    <button class="menu-btn" id="menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Side menu -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <div class="side-menu" id="sideMenu">
+        <button class="close-btn" id="closeBtn">×</button>
+
+        <h2>Santarpana Menu</h2>
+
+        <!-- User + Admin both can see -->
+  <a href="home.html"> Home</a>
+<a href="expenses-description.html"> Expenses Description</a>
+
+
+<!-- Admin only -->
+<a href="all-donations.html" class="admin-only"> All Donation Details</a>
+<a href="donate.html" class="admin-only"> Donate for Santarpana</a>
+<a href="chavithi-donations.html" class="admin-only"> Donate for Chavithi</a>
+<a href="expenses.html" class="admin-only"> Add Total Expenses</a>
+<a href="admin-approval.html" class="admin-only"> User Approval</a>
+
+<a href="#" id="logoutBtn"> Logout</a>
+    </div>
+
+    <!-- Top text -->
+    <div class="top-fixed-text">
+        <span class="main-title">Sri Varasidhi Vinayaka</span>
+        <span class="sub-title">Utsav Committee</span>
+    </div>
+
+    <main class="main-page">
+
+        <section class="hero-section">
+            <div class="ganesh-circle">
+                <img src="images/ganesh.webp" alt="Ganesh">
+            </div>
+
+            <h2>गणपति बप्पा मोरया</h2>
+            <h1>Santarpana Seva</h1>
+
+            <p>
+                Santarpana Seva is a devotional food offering service for devotees.
+                Your support helps us serve prasadam and food with devotion.
+            </p>
+
+            <a href="donate.html" class="donate-btn admin-only">Donate for Santarpana</a>
+
+            <!-- User + Admin both can see summary -->
+            <section class="summary-section" id="summary">
+
+                <h2 class="summary-title">Donation Summary</h2>
+
+                <div class="summary-grid">
+
+                    <div class="summary-card">
+                        <h3>Chavithi Donations</h3>
+                        <p id="chavithiDonation">₹0</p>
+                    </div>
+
+                    <div class="summary-card">
+                        <h3>Santarpana Donations</h3>
+                        <p id="santarpanaDonation">₹0</p>
+                    </div>
+
+                    <div class="summary-card expense-card">
+                        <h3>Total Expenses</h3>
+                        <p id="totalExpenses">₹0</p>
+                    </div>
+
+                    <div class="summary-card balance-card">
+                        <h3>Remaining Balance</h3>
+                        <p id="remainingBalance">₹0</p>
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- Photo Gallery Button -->
+<section class="gallery-open-section">
+    <button class="gallery-open-btn" id="openGalleryBtn">
+        <img src="images/ganesh.webp" alt="">
+        <span>Event Gallery</span>
+    </button>
+</section>
+<!-- Uploaded PDF Button - User + Admin both can see -->
+<section class="pdf-open-section">
+    <a href="pdf-reports.html" class="pdf-open-btn" id="pdfOpenBtn">
+         Uploaded PDFs
+    </a>
+</section>
+    
+
+        </section>
+
+        <section class="details-section" id="details">
+            <h2>Santarpana Details</h2>
+
+            <div class="detail-card">
+                <h3>🙏 What is Santarpana?</h3>
+                <p>
+                    Santarpana means serving food/prasadam to devotees with devotion
+                    during Ganesh Utsav celebrations.
+                </p>
+            </div>
+
+            <div class="detail-card">
+                <h3>🍛 Purpose</h3>
+                <p>
+                    Donations are used for prasadam, annadanam, pooja needs,
+                    and serving devotees.
+                </p>
+            </div>
+
+            <div class="detail-card">
+                <h3>📍 Location</h3>
+                <p>
+                    Sri Varasidhi Vinayaka Mandapam, Tanuku, Andhra Pradesh.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="bottom-scroll-text">
+        <div class="bottom-scroll-track">
+            <img src="images/l1.webp" class="bottom-scroll-img" alt="">
+            Support Santarpana Seva • Ganapati Bappa Morya • Sri Varasidhi Vinayaka Utsav Committee •
+        </div>
+    </div>
+<!-- Gallery Popup -->
+<div class="gallery-popup" id="galleryPopup">
+
+    <div class="gallery-box">
+
+        <button class="gallery-close" id="closeGalleryBtn">×</button>
+
+        <h2>Event Photo Gallery</h2>
+
+        <!-- Admin only upload -->
+        <div class="gallery-upload admin-only">
+            <input type="file" id="galleryUploadInput" accept="image/*" multiple>
+            <label for="galleryUploadInput"> Upload Photos</label>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Photos will show here -->
+        </div>
+
+    </div>
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="home.js"></script>
+
+</body>
+</html>
