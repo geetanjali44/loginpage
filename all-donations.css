@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #500250c5, #04344527);
+    color: #fff;
+}
+
+.back-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255,204,0,0.25);
+    border: 1px solid rgba(255,204,0,0.7);
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+.donations-page {
+    width: 90%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 70px 0 35px;
+}
+
+.donations-page h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 24px;
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 8px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.9);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #fff3c4;
+    margin-bottom: 18px;
+}
+
+.summary-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.total-box {
+    padding: 15px 10px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,204,0,0.5);
+    text-align: center;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+    backdrop-filter: blur(8px);
+}
+
+.total-box p {
+    color: #fff3c4;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.total-box h2 {
+    color: #fff;
+    font-size: 25px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.9);
+}
+
+.grand-total {
+    grid-column: 1 / -1;
+    border-color: rgba(34,197,94,0.7);
+}
+
+.grand-total h2 {
+    color: #86efac;
+    font-size: 31px;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.tab-btn {
+    flex: 1;
+    height: 46px;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,204,0,0.4);
+    color: #fff3c4;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #f59e0b, #b45309);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(244,220,5,0.35);
+}
+
+.donation-section {
+    padding: 16px;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,204,0,0.4);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.42);
+    backdrop-filter: blur(8px);
+}
+
+.donation-section.hide {
+    display: none;
+}
+
+.donation-section h2 {
+    font-family: 'Cinzel Decorative', serif;
+    color: #ffcc00;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.donation-card {
+    padding: 15px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,204,0,0.45);
+    margin-bottom: 14px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+}
+
+.donation-card h3 {
+    color: #ffcc00;
+    font-size: 17px;
+    margin-bottom: 9px;
+}
+
+.donation-card p {
+    color: #fff3c4;
+    font-size: 13px;
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.donation-card strong {
+    color: #fff;
+}
+
+.delete-btn {
+    margin-top: 10px;
+    width: 100%;
+    height: 38px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(220,38,38,0.9);
+    color: #fff;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.empty-msg {
+    text-align: center;
+    color: #fff3c4;
+    padding: 22px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,204,0,0.35);
+}
+
+@media (max-width: 480px) {
+    .donations-page {
+        width: 88%;
+    }
+
+    .donations-page h1 {
+        font-size: 20px;
+    }
+
+    .total-box h2 {
+        font-size: 22px;
+    }
+
+    .grand-total h2 {
+        font-size: 27px;
+    }
+
+    .tab-btn {
+        font-size: 12px;
+    }
+
+    .donation-section {
+        padding: 14px;
+    }
+}
+.download-pdf-btn {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #16a34a, #166534);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+    margin-bottom: 18px;
+    box-shadow: 0 8px 20px rgba(22, 163, 74, 0.45);
+}
+
+.download-pdf-btn:active {
+    transform: scale(0.97);
+}
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.edit-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn {
+    flex: 1;
+    height: 38px;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #f59e0b;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+.save-btn {
+    background: #16a34a;
+}
+
+.cancel-btn {
+    background: #6b7280;
+}
+
+.edit-box {
+    margin-top: 12px;
+}
+
+.edit-box input,
+.edit-box textarea,
+.edit-box select {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    padding: 0 12px;
+    font-size: 14px;
+    background: rgba(255,255,255,0.92);
+    color: #333;
+}
+
+.edit-box input,
+.edit-box select {
+    height: 42px;
+}
+
+.edit-box textarea {
+    height: 85px;
+    padding-top: 10px;
+    resize: none;
+}
