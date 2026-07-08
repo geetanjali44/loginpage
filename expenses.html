@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Expenses</title>
+
+    <link rel="stylesheet" href="expenses.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel+Decorative:wght@700;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <a href="home.html" class="back-btn">←</a>
+
+    <main class="expense-page">
+
+        <h1>Total Expenses</h1>
+        <p class="subtitle">Add Ganesh Chavithi and Santarpana expense details.</p>
+
+        <div class="expense-total-box">
+            <p>Total Expenses</p>
+            <h2 id="expensesTotal">₹0</h2>
+        </div>
+
+        <form id="expenseForm">
+
+            <input type="text" id="expenseTitle" placeholder="Enter Expense Name" required>
+
+            <input type="number" id="expenseAmount" placeholder="Enter Expense Amount" required>
+
+            <input type="text" id="expensePaidTo" placeholder="Paid To / Shop Name" required>
+
+            <input type="text" id="expenseCategory" placeholder="Category Eg: Decoration, Food, Pooja" required>
+
+            <textarea id="expenseNote" placeholder="Enter Expense Note / Details"></textarea>
+
+            <button type="submit">Submit Expense</button>
+
+        </form>
+
+       
+
+    </main>
+
+    <script src="expenses.js"></script>
+</body>
+</html>
