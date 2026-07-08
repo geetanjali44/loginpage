@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate for Santarpana</title>
+
+    <link rel="stylesheet" href="donate.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel+Decorative:wght@700;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <a href="home.html" class="back-btn">←</a>
+
+    <main class="donate-page">
+
+        <h1>Donate for Santarpana</h1>
+        <p class="subtitle">Fill your details and scan QR for Santarpana Seva.</p>
+
+       <div class="qr-box" id="qrBox">
+    <img src="images/scanner.webp" alt="QR Code">
+</div>
+<form id="donateForm">
+
+    <input type="text" id="personName" placeholder="Enter Full Name" required>
+
+    <input type="tel" id="personMobile" placeholder="Enter Mobile Number" maxlength="10" required>
+
+    <input type="number" id="donationAmount" placeholder="Enter Donation Amount" required>
+
+    <select id="paymentMode" required>
+        <option value="">Select Payment Mode</option>
+        <option value="UPI">UPI</option>
+        <option value="Cash">Cash</option>
+
+    </select>
+
+    <input type="text" id="transactionId" placeholder="Transaction ID / UTR Number">
+
+    <input type="text" id="personLocation" placeholder="Enter Location / Area" required>
+
+    <textarea id="personAddress" placeholder="Enter Full Address" required></textarea>
+
+    <button type="submit">Submit Santarpana Donation</button>
+
+</form>
+    </main>
+
+
+    <script src="donate.js"></script>
+</body>
+</html>
