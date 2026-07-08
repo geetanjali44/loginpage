@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #500250c5, #04344527);
+    color: #fff;
+}
+
+
+.back-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255,204,0,0.25);
+    border: 1px solid rgba(255,204,0,0.7);
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+.donations-page {
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 70px 0 30px;
+}
+
+.donations-page h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 22px;
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 18px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.9);
+}
+
+.total-box {
+    padding: 18px;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,204,0,0.55);
+    text-align: center;
+    margin-bottom: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+}
+
+.total-box p {
+    color: #fff3c4;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.total-box h2 {
+    color: #fff;
+    font-size: 36px;
+    text-shadow: 0 5px 14px rgba(0,0,0,0.9);
+}
+
+.donation-card {
+    padding: 16px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,204,0,0.45);
+    margin-bottom: 14px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+    backdrop-filter: blur(8px);
+}
+
+.donation-card h3 {
+    color: #ffcc00;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.donation-card p {
+    font-size: 14px;
+    color: #fff3c4;
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.donation-card strong {
+    color: #fff;
+}
+
+.empty-msg {
+    text-align: center;
+    color: #fff3c4;
+    padding: 25px 10px;
+    font-size: 15px;
+}
+
+@media (max-width: 480px) {
+    .donations-page {
+        width: 88%;
+    }
+
+    .donations-page h1 {
+        font-size: 18px;
+    }
+
+    .total-box h2 {
+        font-size: 31px;
+    }
+
+    .donation-card h3 {
+        font-size: 16px;
+    }
+
+    .donation-card p {
+        font-size: 13px;
+    }
+}
