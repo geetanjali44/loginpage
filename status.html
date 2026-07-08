@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Status</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #5b1600, #120700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .status-box {
+            width: 100%;
+            max-width: 390px;
+            padding: 30px 22px;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 204, 0, 0.5);
+            text-align: center;
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+        }
+
+        .ganesh-icon {
+            width: 92px;
+            height: 92px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #ffcc00;
+            box-shadow: 0 0 24px rgba(255, 204, 0, 0.55);
+        }
+
+        .ganesh-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .loader {
+            width: 58px;
+            height: 58px;
+            border: 6px solid rgba(255, 255, 255, 0.25);
+            border-top-color: #ffcc00;
+            border-radius: 50%;
+            margin: 0 auto 18px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        h1 {
+            color: #ffcc00;
+            margin-bottom: 12px;
+            font-size: 25px;
+        }
+
+        p {
+            color: #fff3c4;
+            line-height: 1.5;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .mobile-text {
+            color: #fff;
+            font-weight: 800;
+            margin-top: 8px;
+        }
+
+        .logout-btn {
+            margin-top: 20px;
+            width: 100%;
+            height: 46px;
+            border: none;
+            border-radius: 14px;
+            background: #dc2626;
+            color: #fff;
+            font-weight: 900;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .approved {
+            color: #22c55e;
+        }
+
+        .rejected {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="status-box">
+
+        <div class="ganesh-icon">
+            <img src="images/ganesh.webp" alt="Ganesh">
+        </div>
+
+        <div class="loader" id="loader"></div>
+
+        <h1 id="statusTitle">Approval Pending</h1>
+
+        <p id="statusText">
+            Your login request is pending. Please wait until admin approves your account.
+        </p>
+
+        <p class="mobile-text" id="mobileText"></p>
+
+        <button class="logout-btn" id="logoutBtn">Logout</button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="status.js"></script>
+
+</body>
+</html>
