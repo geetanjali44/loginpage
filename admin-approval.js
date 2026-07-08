@@ -40,25 +40,29 @@ async function loadUsers() {
 
     usersList.innerHTML = `<div class="empty">Loading users...</div>`;
 
-   const { data, error } = await supabaseClient
-    .from("profiles")
-    .select("id, name, mobile, role, status, created_at")
-    .order("created_at", { ascending: false });
+    const { data, error } = await supabaseClient
+        .from("profiles")
+        .select("id, name, mobile, role, status, created_at")
+        .order("created_at", { ascending: false });
+
     console.log("Admin approval data:", data);
-console.log("Admin approval error:", error);
+    console.log("Admin approval error:", error);
 
     if (error) {
-        usersList.innerHTML = `<div class="empty">Error loading users</div>`;
-        console.log(error);
+        usersList.innerHTML = `<div class="empty">Error loading users: ${error.message}</div>`;
         return;
     }
 
-    if (!data || data.length === 0) {
+    const users = data.filter(function (item) {
+        return item.role === "user";
+    });
+
+    if (!users || users.length === 0) {
         usersList.innerHTML = `<div class="empty">No users found</div>`;
         return;
     }
 
-    usersList.innerHTML = data.map(function (user) {
+    usersList.innerHTML = users.map(function (user) {
         return `
             <div class="user-card">
                 <h3>${user.name || "User"}</h3>
