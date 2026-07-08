@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ganesh Login</title>
+
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <img src="images/m1.webp" class="mouse-corner mouse-left" alt="Mouse Left">
 <img src="images/m2.webp" class="mouse-corner mouse-right" alt="Mouse Right">
 
@@ -15,68 +17,71 @@
     <span class="happy-text">Sri Varasidhi Vinayaka</span>
     <span class="festival-text">Utsav Committee</span>
 </div>
-    <div class="main-box">
 
-        <!-- Round Small Ganesh Image -->
-        <div class="ganesh-zone">
+<div class="main-box">
 
-    <!-- Flowers start from far top -->
-    <div class="flower-stream"></div>
+    <div class="ganesh-zone">
 
-    <!-- Round Ganesh image -->
-    <div class="ganesh-round">
-        <img src="images/ganesh.webp" alt="Ganesh">
-    </div>
+        <div class="flower-stream"></div>
 
-</div>
-        <!-- Login Details Separate -->
-        <div class="login-details">
-            <h2>गणपति बप्पा मोरया</h2>
-            <p>Login to continue</p>
-
-            <form id="loginForm">
-
-    <div class="input-with-mouse">
-    <div class="mobile-input-box">
-        <span class="country-code">+91</span>
-
-        <input
-            type="tel"
-            id="mobileInput"
-            placeholder="Enter Mobile Number"
-            maxlength="10"
-            required
-        >
-    </div>
-
-    <img src="images/mouseinput.webp" class="input-corner-mouse" alt="Mouse">
-</div>
-
-    <div class="password-box" id="passwordBox">
-        <input
-            type="password"
-            id="passwordInput"
-            placeholder="Enter Password"
-            required
-        >
-
-        <button type="submit" class="done-btn">
-            Done
-        </button>
-    </div>
-
-</form>
+        <div class="ganesh-round">
+            <img src="images/ganesh.webp" alt="Ganesh">
         </div>
 
     </div>
-    
-<!-- Bottom scrolling text like top scroller -->
+
+    <div class="login-details">
+        <h2>गणपति बप्पा मोरया</h2>
+        <p>Login to continue</p>
+
+        <form id="loginForm">
+
+            <div class="input-with-mouse">
+                <div class="mobile-input-box">
+                    <span class="country-code">+91</span>
+
+                    <input
+                        type="tel"
+                        id="mobileInput"
+                        placeholder="Enter Mobile Number"
+                        maxlength="10"
+                        required
+                    >
+                </div>
+
+                <img src="images/mouseinput.webp" class="input-corner-mouse" alt="Mouse">
+            </div>
+
+            <div class="password-box" id="passwordBox">
+                <input
+                    type="password"
+                    id="passwordInput"
+                    placeholder="Enter Password"
+                    required
+                >
+
+                <button type="submit" class="done-btn">
+                    Done
+                </button>
+            </div>
+
+            <p id="loginMessage" style="margin-top:12px;color:#ffcc00;font-weight:800;text-align:center;"></p>
+
+        </form>
+    </div>
+
+</div>
+
 <div class="bottom-scroll-text">
     <div class="bottom-scroll-track">
         <img src="images/l1.webp" class="bottom-scroll-img" alt="">
-        Vijay || Vinay || sailu || Keerthi || Geetanjali || Jyothi 
+        Vijay || Vinay || sailu || Keerthi || Geetanjali || Jyothi
     </div>
 </div>
-    <script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
