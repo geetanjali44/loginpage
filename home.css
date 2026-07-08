@@ -849,3 +849,69 @@ body.admin .admin-only {
         border-radius: 16px;
     }
 }
+/* BIG PHOTO VIEWER - MOBILE + PC */
+.photo-viewer {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 999999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+}
+
+.photo-viewer.show {
+    display: flex;
+}
+
+.photo-viewer img {
+    width: auto;
+    max-width: 94vw;
+    max-height: 84vh;
+    object-fit: contain;
+    border-radius: 18px;
+    background: #111;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.75);
+}
+
+.photo-viewer-close {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: #dc2626;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 42px;
+    cursor: pointer;
+    z-index: 1000000;
+}
+
+@media (max-width: 480px) {
+    .photo-viewer {
+        padding: 10px;
+    }
+
+    .photo-viewer img {
+        max-width: 96vw;
+        max-height: 78vh;
+        border-radius: 14px;
+    }
+
+    .photo-viewer-close {
+        top: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
