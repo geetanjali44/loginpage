@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Donation Details</title>
+
+    <link rel="stylesheet" href="all-donations.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <a href="home.html" class="back-btn">←</a>
+
+    <main class="donations-page">
+
+        <h1>All Donation Details</h1>
+        <p class="subtitle">Santarpana and Chavithi donation details.</p>
+         <button id="downloadAllDonationsPdfBtn" class="download-pdf-btn">
+    📥 Download All Donations PDF
+</button>
+        <section class="summary-boxes">
+
+            <div class="total-box">
+                <p>Chavithi Total</p>
+                <h2 id="chavithiTotalAmount">₹0</h2>
+            </div>
+
+            <div class="total-box">
+                <p>Santarpana Total</p>
+                <h2 id="santarpanaTotalAmount">₹0</h2>
+            </div>
+
+            <div class="total-box grand-total">
+                <p>Total Donations</p>
+                <h2 id="grandTotalAmount">₹0</h2>
+            </div>
+
+        </section>
+
+        <section class="tab-buttons">
+            <button class="tab-btn active" id="chavithiTab">Chavithi Details</button>
+            <button class="tab-btn" id="santarpanaTab">Santarpana Details</button>
+        </section>
+
+        <section class="donation-section" id="chavithiSection">
+            <h2>Chavithi Donation Details</h2>
+            <div class="donation-list" id="chavithiDonationList"></div>
+        </section>
+
+        <section class="donation-section hide" id="santarpanaSection">
+            <h2>Santarpana Donation Details</h2>
+            <div class="donation-list" id="santarpanaDonationList"></div>
+        </section>
+
+    </main>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+
+<script src="all-donations.js"></script>
+</body>
+</html>
