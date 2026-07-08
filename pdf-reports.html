@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Reports</title>
+
+    <link rel="stylesheet" href="pdf-reports.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <a href="home.html" class="back-btn">←</a>
+
+    <main class="pdf-page">
+
+        <h1>PDF Reports</h1>
+        <p class="subtitle">Uploaded committee PDF reports.</p>
+
+        <!-- Admin only upload -->
+        <section class="upload-section admin-only">
+            <h2>Upload PDF</h2>
+
+            <div class="upload-box">
+                <input type="file" id="pdfUploadInput" accept="application/pdf">
+                <label for="pdfUploadInput">📤 Upload PDF</label>
+            </div>
+
+            <p class="upload-note">Only admin can upload PDF reports.</p>
+        </section>
+
+        <!-- User + Admin can see -->
+        <section class="pdf-list-section">
+            <h2>Available PDFs</h2>
+
+            <div id="pdfList" class="pdf-list">
+                <!-- PDFs will show here -->
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="pdf-reports.js"></script>
+</body>
+</html>
