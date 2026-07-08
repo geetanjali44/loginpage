@@ -8,7 +8,7 @@ html, body {
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
-    font-family: 'Poppins', sans-serif;
+    font-family: emoji;
 }
 
 body {
@@ -246,19 +246,54 @@ body {
     margin-bottom: 18px;
 }
 
+/* Donate Buttons */
+/* Donate Buttons - Clean Center */
 .donate-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    border-radius: 16px;
-    padding: 12px 18px 10px;
-    background: linear-gradient(135deg, #f59e0b, #b45309);
-    color: #fff;
+    width: 205px;
+    height: 42px;
+    margin: 9px auto 0;
+    border-radius: 13px;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 800;
-    box-shadow: 0 8px 20px rgba(244, 220, 5, 0.55);
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1;
+    padding: 10px 10px;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+
+    color: #4b1600;
+    background: linear-gradient(135deg, #ffcc00, #ff7a00);
+    box-shadow: 0 6px 16px rgba(255, 122, 0, 0.42);
+    border: 2px solid rgba(255, 255, 255, 0.45);
+}
+
+/* Santarpana Button */
+.donate-btn[href="donate.html"] {
+    background: linear-gradient(135deg, #ffcc00, #ff8a00);
+    color: #0b0000;
+}
+
+/* Chavithi Button */
+.donate-btn[href="chavithi-donations.html"] {
+    background: linear-gradient(135deg, #ffcc00, #ffb000);
+    color: #0f0900;
+}
+
+.donate-btn:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 480px) {
+    .donate-btn {
+        width: 190px;
+        height: 39px;
+        font-size: 11px;
+        border-radius: 12px;
+        margin-top: 8px;
+    }
 }
 
 /* Details */
